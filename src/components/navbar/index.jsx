@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = React.useState(false);
@@ -20,7 +21,9 @@ export default function Navbar() {
         </div>
 
         <ul>
-          <li>Centers</li>
+          <Link to={"/learning-centers"}>
+            <li>Centers</li>
+          </Link>
           <li>Profession</li>
           <li>Regions</li>
           <li>Resources</li>
@@ -30,23 +33,26 @@ export default function Navbar() {
           <button>Log IN</button>
         </div>
         <React.Fragment>
-          <Button onClick={openDrawer} className="button-drawer"><i class="fa-solid fa-bars"></i></Button>
+          <Button onClick={openDrawer} className="button-drawer">
+            <i class="fa-solid fa-bars"></i>
+          </Button>
           <Drawer open={open} onClose={closeDrawer} className="p-4 ">
             <div className="drawer">
-            <ul className="smUl">
-              <li>Centers</li>
-              <li>Profession</li>
-              <li>Regions</li>
-              <li>Resources</li>
-            </ul>
-            <div className="buttons sm-buttons mx-6">
-              <button>Sign UP</button>
-              <button>Log IN</button>
-            </div>
+              <ul className="smUl">
+                <Link to={"/learning-centers"}>
+                  <li>Centers</li>
+                </Link>
+                <li>Profession</li>
+                <li>Regions</li>
+                <li>Resources</li>
+              </ul>
+              <div className="buttons sm-buttons mx-6">
+                <button>Sign UP</button>
+                <button>Log IN</button>
+              </div>
             </div>
           </Drawer>
         </React.Fragment>
-
       </div>
     </div>
   );

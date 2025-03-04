@@ -1,7 +1,12 @@
 import { Input } from "@material-tailwind/react";
 import "./style.scss";
 import photo from "./assets/showcase.png";
+import { useEffect } from "react";
+import { api } from "../../utils/axios";
 export default function Home() {
+  // useEffect(()=>{
+  //    api.get('/api/lc-ratings/stars?page=1&take=6&sort=DESC').then((res)=> console.log(res))
+  // },[])
   return (
     <div className="home-page">
       <div className="container-showcase">
