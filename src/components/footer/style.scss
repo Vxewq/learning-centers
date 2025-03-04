@@ -48,3 +48,12 @@
     }
   }
 }
+
+
+@media(max-width: 768px){
+  .container-footer{
+    .footer{
+      flex-wrap: wrap;
+    }
+  }
+}
