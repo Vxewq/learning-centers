@@ -26,7 +26,9 @@ export default function Navbar() {
           </Link>
           <li>Profession</li>
           <li>Regions</li>
+          <Link to={'/resource'}>
           <li>Resources</li>
+          </Link>
         </ul>
         <div className="buttons">
           <button>Sign UP</button>
@@ -44,7 +46,9 @@ export default function Navbar() {
                 </Link>
                 <li>Profession</li>
                 <li>Regions</li>
+                <Link to={'/resource'}>
                 <li>Resources</li>
+                </Link>
               </ul>
               <div className="buttons sm-buttons mx-6">
                 <button>Sign UP</button>

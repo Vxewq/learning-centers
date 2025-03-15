@@ -27,6 +27,7 @@ export default function LearningCenters() {
       <div className="catalog-lc">
         <div className="title">
           <h1>Learning Centers</h1>
+          
         </div>
         <div className="centers">
           {lc?.map((center) => {
@@ -72,29 +73,7 @@ export default function LearningCenters() {
           })}
         </div>
       </div>
-      <div className="filter">
-        <h1>Filter</h1>
-        <div className="w-72">
-          <Select
-            label="Sorted By"
-            value={value}
-            onChange={(val) => setValue(val)}
-          >
-            <Option value="likes">
-              Likes <i class="fa-solid fa-heart"></i>
-            </Option>
-            <Option value="top">
-              Popular <i class="fa-solid fa-fire"></i>
-            </Option>
-            <Option value="comments">
-              Comments <i class="fa-solid fa-comment"></i>
-            </Option>
-            <Option value="rating">
-              Rating <i class="fa-solid fa-star"></i>
-            </Option>
-          </Select>
-        </div>
-      </div>
+      
     </div>
   );
 }
