@@ -11,21 +11,20 @@
     .logo {
       font-family: "Dongle";
       font-size: 50px;
-      h1{
-          position: relative;
+      h1 {
+        position: relative;
         &::after {
-            content: '';
-            background: #008080;
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            width: 100%;
-            height: 30%;
-            z-index: -1;
-            transform: skewX(-20deg);
-          }
+          content: "";
+          background: #008080;
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          width: 100%;
+          height: 30%;
+          z-index: -1;
+          transform: skewX(-20deg);
+        }
       }
-      
     }
     ul {
       display: flex;
@@ -38,20 +37,20 @@
         cursor: pointer;
       }
     }
-    .smUl{
-        flex-direction: column;
-        li{
-            border-radius: 3px;
-            padding: 0 6px;
-            transition: 0.4s;
-            &:hover{
-                background: rgb(188, 188, 188);
-            }
+    .smUl {
+      flex-direction: column;
+      li {
+        border-radius: 3px;
+        padding: 0 6px;
+        transition: 0.4s;
+        &:hover {
+          background: rgb(188, 188, 188);
         }
+      }
     }
-    .button-drawer{
-        background: #008080;
-        display: none;
+    .button-drawer {
+      background: #008080;
+      display: none;
     }
 
     .buttons {
@@ -65,41 +64,42 @@
         &:first-child {
         }
         &:last-child {
-          background: #008080;
-          color: white;
-          padding: 0 10px;
-          border-radius: 4px;
         }
+      }
+      a:last-child button {
+        background: #008080;
+        color: white;
+        padding: 0 10px;
+        border-radius: 4px;
       }
     }
   }
 }
 
-
-@media(max-width: 960px){
-    .container-navbar{
-        .navbar{
-            ul{
-                display: none;
-            }
-            .buttons{
-                display: none;
-            }
-            .button-drawer{
-                display: block;
-            }
-            .drawer{
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                gap: 30px;
-                .smUl{
-                    display: flex;
-                }
-                .sm-buttons{
-                    display: flex;
-                }
-            }
-            }
+@media (max-width: 960px) {
+  .container-navbar {
+    .navbar {
+      ul {
+        display: none;
+      }
+      .buttons {
+        display: none;
+      }
+      .button-drawer {
+        display: block;
+      }
+      .drawer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        .smUl {
+          display: flex;
+        }
+        .sm-buttons {
+          display: flex;
+        }
+      }
     }
+  }
 }

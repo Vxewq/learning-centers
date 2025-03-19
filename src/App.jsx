@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import LearningCenters from "./pages/learning-centers";
 import CenterPage from "./pages/center-page";
 import ResourcePage from "./pages/resource";
+import Auth from "./pages/auth";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/learning-centers" element={<LearningCenters />} />
         <Route path="/resource" element={<ResourcePage />} />
         <Route path="/center-page/:id" element={<CenterPage />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
       <Footer />
       

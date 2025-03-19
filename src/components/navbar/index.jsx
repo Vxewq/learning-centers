@@ -26,13 +26,17 @@ export default function Navbar() {
           </Link>
           <li>Profession</li>
           <li>Regions</li>
-          <Link to={'/resource'}>
-          <li>Resources</li>
+          <Link to={"/resource"}>
+            <li>Resources</li>
           </Link>
         </ul>
         <div className="buttons">
-          <button>Sign UP</button>
-          <button>Log IN</button>
+          <Link to={"/auth"}>
+            <button>Sign UP</button>
+          </Link>
+          <Link to={'/auth'}>
+          <button>Log In</button>
+          </Link>
         </div>
         <React.Fragment>
           <Button onClick={openDrawer} className="button-drawer">
@@ -46,8 +50,8 @@ export default function Navbar() {
                 </Link>
                 <li>Profession</li>
                 <li>Regions</li>
-                <Link to={'/resource'}>
-                <li>Resources</li>
+                <Link to={"/resource"}>
+                  <li>Resources</li>
                 </Link>
               </ul>
               <div className="buttons sm-buttons mx-6">
