@@ -5,6 +5,10 @@ import {
   Button,
   Typography,
   IconButton,
+  MenuHandler,
+  Menu,
+  MenuList,
+  MenuItem,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
@@ -17,25 +21,43 @@ export default function Navbar() {
     <div className="container-navbar">
       <div className="navbar">
         <div className="logo">
-          <h1>LOGO</h1>
+          <img src="/logo.png" alt="" />
         </div>
 
         <ul>
           <Link to={"/learning-centers"}>
             <li>Centers</li>
           </Link>
-          <li>Profession</li>
-          <li>Regions</li>
           <Link to={"/resource"}>
             <li>Resources</li>
           </Link>
+          <Menu>
+            <MenuHandler>
+              <Button className="btn" variant="outlined">Proffesions</Button>
+            </MenuHandler>
+            <MenuList>
+              <MenuItem>Computer Science</MenuItem>
+              <MenuItem>Frontend</MenuItem>
+              <MenuItem>Backend</MenuItem>
+            </MenuList>
+          </Menu>
+          <Menu>
+            <MenuHandler>
+              <Button className="btn bg">Regions</Button>
+            </MenuHandler>
+            <MenuList>
+              <MenuItem>Tashkent</MenuItem>
+              <MenuItem>Samarqand</MenuItem>
+              <MenuItem>Xorazm</MenuItem>
+            </MenuList>
+          </Menu>
         </ul>
         <div className="buttons">
           <Link to={"/auth"}>
             <button>Sign UP</button>
           </Link>
-          <Link to={'/auth'}>
-          <button>Log In</button>
+          <Link to={"/auth"}>
+            <button>Log In</button>
           </Link>
         </div>
         <React.Fragment>

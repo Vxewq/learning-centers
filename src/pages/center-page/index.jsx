@@ -23,16 +23,16 @@ export default function CenterPage() {
   return (
     <div className="container-center">
       <div className="center">
+        <div className="top">
         <div className="title">
-          <div className="side">
-            <div className="image">
-              <img src="https://taplink.st/a/e/7/8/a/9856a9.jpg?1" alt="" />
-            </div>
+          <div className="image">
+            <img src="https://taplink.st/a/e/7/8/a/9856a9.jpg?1" alt="" />
+          </div>
+          
+          <div className="side-rating">
             <h1>
               {center.name} <br /> {center.region?.name}
             </h1>
-          </div>
-          <div className="side-rating">
             <Rating value={stars} readonly />
             <h2>{center.address}</h2>
           </div>
@@ -54,16 +54,17 @@ export default function CenterPage() {
             })}
           </div>
         </div>
+        </div>
         <div className="comments">
-            <h1 className="title">Comments from other users:</h1>
-            {
-                center.comments?.map(com => {
-                    return <div className="comment">
-                        <Rating value={Math.floor(com.star)} readonly/>
-                        <h1>{com.comment}</h1>
-                    </div>
-                })
-            }
+          <h1 className="titlecom">Comments from other users:</h1>
+          {center.comments?.map((com) => {
+            return (
+              <div className="comment">
+                <Rating value={Math.floor(com.star)} readonly />
+                <h1>{com.comment}</h1>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
