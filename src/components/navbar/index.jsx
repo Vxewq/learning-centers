@@ -20,9 +20,11 @@ export default function Navbar() {
   return (
     <div className="container-navbar">
       <div className="navbar">
-        <div className="logo">
-          <img src="/logo.png" alt="" />
-        </div>
+        <Link to={'/'}>
+          <div className="logo">
+            <img src="/logo.png" alt="" />
+          </div>
+        </Link>
 
         <ul>
           <Link to={"/learning-centers"}>
@@ -33,7 +35,9 @@ export default function Navbar() {
           </Link>
           <Menu>
             <MenuHandler>
-              <Button className="btn" variant="outlined">Proffesions</Button>
+              <Button className="btn" variant="outlined">
+                Proffesions
+              </Button>
             </MenuHandler>
             <MenuList>
               <MenuItem>Computer Science</MenuItem>

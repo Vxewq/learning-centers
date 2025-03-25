@@ -26,7 +26,6 @@ export default function ResourcePage() {
       console.error("Download failed:", error);
     }
   };
-  console.log(resources[7].img)
 
   return (
     <div className="container-resource">

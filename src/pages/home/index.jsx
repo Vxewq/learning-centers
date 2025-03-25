@@ -1,12 +1,17 @@
 import { Input } from "@material-tailwind/react";
 import "./style.scss";
 import photo from "./assets/showcase.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../../utils/axios";
 export default function Home() {
-  // useEffect(()=>{
-  //    api.get('/api/lc-ratings/stars?page=1&take=6&sort=DESC').then((res)=> console.log(res))
-  // },[])
+  const [findcenter, setName] = useState("");
+  useEffect(() => {
+    api.get("https://your-api.com/api/learning-centers/search", {
+      params: {
+        name: "Najot Talim",
+      },
+    }).then(res => console.log(res.data.data));
+  }, []);
   return (
     <div className="home-page">
       <div className="container-showcase">
@@ -110,15 +115,18 @@ export default function Home() {
         </div>
         <button className="more-btn">more</button>
       </div>
-      
+
       <div className="container-search">
         <div className="title">
-          <h1>Already know where you want to learn? <br /> Find It</h1>
-          
+          <h1>
+            Already know where you want to learn? <br /> Find It
+          </h1>
         </div>
         <div className="input">
           <input type="text" placeholder="learning center" />
-           <button className="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button className="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
       </div>
     </div>
