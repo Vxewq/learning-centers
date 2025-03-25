@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div className="container-navbar">
       <div className="navbar">
-        <Link to={'/'}>
+        <Link to={"/"}>
           <div className="logo">
             <img src="/logo.png" alt="" />
           </div>
@@ -74,11 +74,32 @@ export default function Navbar() {
                 <Link to={"/learning-centers"}>
                   <li>Centers</li>
                 </Link>
-                <li>Profession</li>
-                <li>Regions</li>
+
                 <Link to={"/resource"}>
                   <li>Resources</li>
                 </Link>
+                <Menu>
+                  <MenuHandler>
+                    <Button className="btn" variant="outlined">
+                      Proffesions
+                    </Button>
+                  </MenuHandler>
+                  <MenuList>
+                    <MenuItem>Computer Science</MenuItem>
+                    <MenuItem>Frontend</MenuItem>
+                    <MenuItem>Backend</MenuItem>
+                  </MenuList>
+                </Menu>
+                <Menu>
+                  <MenuHandler>
+                    <Button className="btn bg">Regions</Button>
+                  </MenuHandler>
+                  <MenuList>
+                    <MenuItem>Tashkent</MenuItem>
+                    <MenuItem>Samarqand</MenuItem>
+                    <MenuItem>Xorazm</MenuItem>
+                  </MenuList>
+                </Menu>
               </ul>
               <div className="buttons sm-buttons mx-6">
                 <button>Sign UP</button>
